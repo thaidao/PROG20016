@@ -2,21 +2,18 @@
 
 int main() {
     // Declare variables for height and width
-    float height, width, area;
+    float fHeight, fWidth;
 
-    // Ask the user to input the height
+    // Ask the user to input the Height
     printf("Enter the height of the rectangle: ");
-    scanf("%f", &height);
+    scanf("%f", &fHeight);
 
-    // Ask the user to input the width
+    // Ask the user to input the Width
     printf("Enter the width of the rectangle: ");
-    scanf("%f", &width);
-
-    // Calculate the area of the rectangle
-    area = height * width;
+    scanf("%f", &fWidth);
 
     // Print the area of the rectangle
-    printf("The area of the rectangle is: %.2f\n", area);
+    printf("The area of the rectangle is: %.2f\n", fHeight * fWidth);
 
     return 0;
 }
