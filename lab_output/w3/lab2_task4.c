@@ -2,26 +2,27 @@
 
 int main() {
     int hoursWorked;
+	int overtimeHours;
     float salary;
-    const float REGULAR_RATE = 8.00;
-    const float OVERTIME_RATE = 12.00;
-    const int REGULAR_HOURS = 40;
-    const float BASE_SALARY = 320.00;
 
-    // Request hours worked as input
+    // Ask hours worked
     printf("Enter the number of hours worked this week: ");
     scanf("%d", &hoursWorked);
 
     // Compute salary based on hours worked
-    if (hoursWorked <= REGULAR_HOURS) {
-        salary = hoursWorked * REGULAR_RATE;
-    } else {
-        int overtimeHours = hoursWorked - REGULAR_HOURS;
-        salary = BASE_SALARY + (overtimeHours * OVERTIME_RATE);
+    if (hoursWorked <= 40) 
+	{
+        salary = hoursWorked * 8;
+    }
+	else
+	{
+		//Calculate an overtime hours
+        overtimeHours = hoursWorked - 40;
+        salary = 320 + (overtimeHours * 12);
     }
 
-    // Display the salary as output
-    printf("Weekly Salary: $%.2f\n", salary);
+    // Display the salary
+    printf("Weekly Salary: $%f\n", salary);
 
     return 0;
 }
