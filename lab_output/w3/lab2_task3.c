@@ -3,16 +3,20 @@
 int main() {
     char status;
 
-    // Prompt user for input
+    // Ask status
     printf("Enter salesperson's status (s/j): ");
     scanf(" %c", &status);
 
     // Determine salary based on status
     if (status == 's') {
         printf("Senior salesperson's salary: 400 per week\n");
-    } else if (status == 'j') {
+    } 
+    else if (status == 'j') 
+    {
         printf("Junior salesperson's salary: 275 per week\n");
-    } else {
+    }
+    else 
+    {
         printf("Invalid status.\n");
         return 1;
     }
